@@ -1,3 +1,11 @@
+var score = 0
+var click1 = 0
+var click2 = 0
+var click3 = 0
+var click4 = 0
+var click5 = 0
+var click6 = 0
+
 function magnify(imgID, zoom) {
     var img, glass, w, h, bw;
     img = document.getElementById(imgID);
@@ -15,6 +23,9 @@ function magnify(imgID, zoom) {
     h = glass.offsetHeight / 2;
     /*execute a function when someone moves the magnifier glass over the image:*/
     glass.addEventListener("mousemove", moveMagnifier);
+    glass.addEventListener("click", function () {
+        alert("Hi");
+    });
     img.addEventListener("mousemove", moveMagnifier);
     /*and also for touch screens:*/
     glass.addEventListener("touchmove", moveMagnifier);

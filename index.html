@@ -9,21 +9,19 @@
 </head>
 
 <body>
-
     <div class="img-magnifier-container">
         <img id="myimage" style="align-self: center;" src="static/image.png" width="100%" height="100%"
             usemap="#image-map">
 
+
         <map name="image-map">
-            <area target="" alt="Password" title="Password" coords="8,241,279,473" shape="rect">
+            <area id="password" target="" alt="Password" title="Password" coords="8,241,84,360" shape="rect">
+            <area target="" alt="" title="" coords="1412,660,1339,575" shape="rect">
         </map>
     </div>
 
 
     <script>
-        function summa() {
-            alert("Hello");
-        }
         /* Initiate Magnify Function
         with the id of the image, and the strength of the magnifier glass:*/
         magnify("myimage", 2);

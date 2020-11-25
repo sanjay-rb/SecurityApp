@@ -1,35 +1,6 @@
 var score = 0
 var click_count = 0
-var click1 = false
-var click2 = false
-var click3 = false
-var click4 = false
-var click5 = false
-var click6 = false
 
-function clickfor1() {
-    click1 = true;
-}
-
-function clickfor2() {
-    click2 = true;
-}
-
-function clickfor3() {
-    click3 = true;
-}
-
-function clickfor4() {
-    click4 = true;
-}
-
-function clickfor5() {
-    click5 = true;
-}
-
-function clickfor6() {
-    click6 = true;
-}
 
 function magnify(imgID, zoom) {
     var img, glass, w, h, bw;
@@ -48,12 +19,46 @@ function magnify(imgID, zoom) {
     w = glass.offsetWidth / 2;
     h = glass.offsetHeight / 2;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* Click events*/
     glass.addEventListener("click", function (event) {
         if ((event.clientX > 8 && event.clientX < 84) && (event.clientY > 241 && event.clientY < 360)) {
             alert(event.clientX + "-" + event.clientY);
         }
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*execute a function when someone moves the magnifier glass over the image:*/
     glass.addEventListener("mousemove", moveMagnifier);
     img.addEventListener("mousemove", moveMagnifier);

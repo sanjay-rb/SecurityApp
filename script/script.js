@@ -1,5 +1,5 @@
 function giveRules() {
-  swal("Find all Security problems", "You have 6 chances(CLICKS) to spot bugs" , "info");
+  swal("Find all Security problems", "You have 7 chances(CLICKS) to spot bugs" , "info");
 }
 
 var q1 = 0;
@@ -8,6 +8,7 @@ var q3 = 0;
 var q4 = 0;
 var q5 = 0;
 var q6 = 0;
+var q7 = 0;
 var click_count = 0;
 
 
@@ -31,73 +32,90 @@ function magnify(imgID, zoom) {
     /* Click events */
     glass.addEventListener("click", function (event) {
       //alert(event.clientX + "-" + event.clientY);
+
       click_count += 1;
-      if(click_count <= 6){
-        if ((event.clientX > 20  && event.clientX < 78 ) && (event.clientY > 194  && event.clientY < 263)) {
+      if(click_count <= 7){
+        if ((event.clientX > 108  && event.clientX < 179 ) && (event.clientY > 235  && event.clientY < 310)) {
+          //tcs password
           q1 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("Never store passwords --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do not store any credentials/sessions for any reason. (Security Pledge-7) --> GAME OVER","Your scoure is : " + score , "success");
           }else{
-            swal("Never store passwords","You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Do not store any credentials/sessions for any reason. (Security Pledge-7)","You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }
-        else if ((event.clientX > 215 && event.clientX < 424 ) && (event.clientY > 526 && event.clientY < 545 )) {
+        else if ((event.clientX > 868 && event.clientX < 1082 ) && (event.clientY > 55 && event.clientY < 78 )) {
+          //Phishing attack
           q2 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("It should be internalIS.messaging@tcs.com --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do Not open any e-mails, URLs and file attachments received from unsolicited or unreliable and unknown sources and report all suspicious mails to internalIS.messaging@tcs.com(Refer Security Pledge-10) --> GAME OVER","Your scoure is : " + score , "success");
           }else{
-            swal("It should be internalIS.messaging@tcs.com", "You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Do Not open any e-mails, URLs and file attachments received from unsolicited or unreliable and unknown sources and report all suspicious mails to internalIS.messaging@tcs.com(Refer Security Pledge-10)", "You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }
-        else if ((event.clientX > 268 && event.clientX < 726 ) && (event.clientY > 9  && event.clientY < 315 )) {
+        else if ((event.clientX > 1139 && event.clientX < 1513 ) && (event.clientY > 489  && event.clientY < 580 )) {
+          //USB
           q3 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("Correct no external softwares should be installed to TCS asset --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do not use any un-approved utility/device for accesssing customer or TCS infrastructure while connecting to TCS/Customer VDI/VPN. --> GAME OVER","Your scoure is : " + score , "success");
           }
           else{
-            swal("Correct no external softwares should be installed to TCS asset", "You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Do not use any un-approved utility/device for accesssing customer or TCS infrastructure while connecting to TCS/Customer VDI/VPN.", "You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }
-        else if ((event.clientX > 872 && event.clientX < 1062 ) && (event.clientY > 53 && event.clientY < 76 )) {
+        else if ((event.clientX > 1111 && event.clientX < 1511 ) && (event.clientY > 596 && event.clientY < 715 )) {
+          // windows
           q4 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("Phishing attack prevented --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Ensure latest security patches and updated antiviruses are installed in the system and raise it  with IS team for any issues immediately.(Refer Security Pledge point-9) --> GAME OVER","Your scoure is : " + score , "success");
           }else{
-            swal("Phishing attack prevented", "You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Ensure latest security patches and updated antiviruses are installed in the system and raise it  with IS team for any issues immediately.(Refer Security Pledge point-9)", "You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }
-        else if ((event.clientX > 1054 && event.clientX < 1116 ) && (event.clientY > 420 && event.clientY < 485 )) {
+        else if ((event.clientX > 313 && event.clientX < 531 ) && (event.clientY > 251 && event.clientY < 298 )) {
+          // Email ID
           q5 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("No external social media allowed --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do Not open any e-mails, URLs and file attachments received from unsolicited or unreliable and unknown sources and report all suspicious mails to internalIS.messaging@tcs.com(Refer Security Pledge-10) --> GAME OVER","Your scoure is : " + score , "success");
           }else{
-            swal("No external social media allowed", "You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Do Not open any e-mails, URLs and file attachments received from unsolicited or unreliable and unknown sources and report all suspicious mails to internalIS.messaging@tcs.com(Refer Security Pledge-10)", "You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }
-        else if ((event.clientX > 1092 && event.clientX < 1512 ) && (event.clientY > 651 && event.clientY < 730 )) {
+        else if ((event.clientX > 787 && event.clientX < 840 ) && (event.clientY > 714 && event.clientY < 747 )) {
+          // Whatsapp icon
           q6 = 1;
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("Always have latest versions! --> Game Over","Your scoure is : " + score , "success");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do not use social media platforms like Whatsapp while discussing/sharing business information. No data should be out of TCS/Client network.(Security Pledge point 6) --> GAME OVER","Your scoure is : " + score , "success");
           }else{
-            swal("Always have latest versions!", "You are left with "+ (6 - click_count) +" chances" , "success");
+            swal("Do not use social media platforms like Whatsapp while discussing/sharing business information. No data should be out of TCS/Client network.(Security Pledge point 6)", "You are left with "+ (7 - click_count) +" chances" , "success");
+          }
+        }
+        else if ((event.clientX > 104 && event.clientX < 181 ) && (event.clientY > 318 && event.clientY < 376 )) {
+          // Whatsapp icon desktop
+          q7 = 1;
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Do not use social media platforms like Whatsapp while discussing/sharing business information. No data should be out of TCS/Client network.(Security Pledge point 6) --> GAME OVER","Your scoure is : " + score , "success");
+          }else{
+            swal("Do not use social media platforms like Whatsapp while discussing/sharing business information. No data should be out of TCS/Client network.(Security Pledge point 6)", "You are left with "+ (7 - click_count) +" chances" , "success");
           }
         }else{
-          if(click_count == 6){
-            var score = q1 + q2 + q3 + q4 + q5 + q6;
-            swal("Incorrect --> Game Over!","Your scoure is : " + score , "warning");
+          if(click_count == 7){
+            var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+            swal("Incorrect --> GAME OVER!","Your scoure is : " + score , "warning");
           }else{
-            swal("Incorrect!", "You are left with "+ (6 - click_count) +" chances" , "error");
+            swal("Incorrect!", "You are left with "+ (7 - click_count) +" chances" , "error");
           }
         }
       }else{
-        var score = q1 + q2 + q3 + q4 + q5 + q6;
-        swal("Game Over", "Your scoure is : " + score , "info");
+        var score = q1 + q2 + q3 + q4 + q5 + q6 + q7;
+        swal("GAME OVER", "Your scoure is : " + score , "info");
       }
 
     });

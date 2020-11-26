@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Game</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="script/script.js"></script>
 </head>
 
-<body>
+<body onload="giveRules()">
+
     <div class="img-magnifier-container">
-        <img id="myimage" style="align-self: center;" src="static/image.png" width="100%" height="100%"
-            usemap="#image-map">
-
-
-        <map name="image-map">
-            <area id="password" target="" alt="Password" title="Password" coords="8,241,84,360" shape="rect">
-            <area target="" alt="" title="" coords="1412,660,1339,575" shape="rect">
-        </map>
+        <img id="myimage" style="align-self: center;" src="static/image.png" width="100%" height="100%" usemap="#image-map">
     </div>
+
 
 
     <script>
